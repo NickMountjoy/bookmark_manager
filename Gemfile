@@ -11,12 +11,8 @@ gem 'rspec'
 gem 'capybara'
 gem 'database_cleaner'
 
-
-# group :test do
-# gem 'rspec'
-#   gem 'rubocop-rspec'
-#   gem 'rubocop'
-#   gem 'coveralls', require: false
-#   gem 'capybara'
-#   gem 'byebug'
-# end
+group :test do
+  gem 'rspec'
+  gem 'capybara'
+  gem 'rspec-sinatra'
+end
