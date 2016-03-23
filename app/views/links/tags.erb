@@ -1,0 +1,9 @@
+<h1>Currently assigned tags></h1>
+<ul id='tags'>
+  <% @tag.each do |tag| %>
+    <li>
+      <%= tag.name %>
+      <br>
+    </li>
+  <% end %>
+</ul>
