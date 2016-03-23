@@ -1,6 +1,6 @@
 User Stories
 --------------
-.
+
 As a user
 So that I can view my saved links
 I want a homepage that displays all my saved links

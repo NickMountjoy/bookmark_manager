@@ -6,13 +6,17 @@ require_relative 'models/data_mapper_setup'
 
 class Bookmark < Sinatra::Base
 
-  get '/new' do
+  get '/' do
     'Hello Bookmark!'
   end
 
   get '/links' do
     @links = Link.all
     erb :'links/index'
+  end
+
+  get '/links/new' do
+    erb :'links/new'
   end
 
   post '/links' do
@@ -23,14 +27,17 @@ class Bookmark < Sinatra::Base
     redirect '/links'
   end
 
-  get '/links/new' do
-    erb :'links/new'
+  get '/tags/:name' do
+    tag = Tag.first(name: params[:name])
+    @links = tag ? tag.links : []
+    erb :'links/index'
   end
 
   get '/links/tags' do
     @tags = Tag.all
     erb :'links/tags'
   end
+
 
   # start the server if ruby file executed directly
   run! if app_file == $0
