@@ -10,6 +10,7 @@ gem 'selenium-webdriver'
 gem 'rspec'
 gem 'capybara'
 gem 'database_cleaner'
+gem 'rake'
 
 group :test do
   gem 'rspec'
